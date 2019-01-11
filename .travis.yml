@@ -20,13 +20,13 @@ jobs:
       install: skip
       before_script:
         - "echo $JAVA_OPTS"
-        - "export JAVA_POTS=-Xmx1g"
+        - "export JAVA_OPTS=-Xmx1g"
         - mysql -uroot < databases/create_databases.sql
         - ./gradlew testMigrate
       script: ./gradlew clean build
       before_deploy:
         - "echo $JAVA_OPTS"
-        - "export JAVA_POTS=-Xmx1g"
+        - "export JAVA_OPTS=-Xmx1g"
         - git config --local user.name "Travis CI"
         - git config --local user.email "travis@example.com"
         - git tag -f $RELEASE_TAG
