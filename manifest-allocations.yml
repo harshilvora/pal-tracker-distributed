@@ -6,6 +6,7 @@ applications:
   memory: 1G
   instances: 1
   env:
-    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-distributed-harshil-vora.cfapps.io
+#    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-distributed-harshil-vora.cfapps.io
   services:
   - tracker-allocations-database
+  - tracker-service-registry
