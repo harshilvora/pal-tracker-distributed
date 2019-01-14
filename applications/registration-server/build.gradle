@@ -6,3 +6,13 @@ dependencies {
     compile project(":components:users")
     compile("org.springframework.boot:spring-boot-starter-security:$springBootVersion")
 }
+
+
+bootRun.environment([
+        "MANAGEMENT_ENDPOINT_HEALTH_SHOWDETAILS": "always",
+        "management.endpoints.web.expose":"*"
+])
+test.environment([
+        "MANAGEMENT_ENDPOINT_HEALTH_SHOWDETAILS": "always",
+        "management.endpoints.web.expose":"*"
+])

@@ -8,7 +8,9 @@ dependencies {
 
 bootRun.environment([
         "MANAGEMENT_ENDPOINT_HEALTH_SHOWDETAILS": "always",
+        "management.endpoints.web.expose":"*"
 ])
 test.environment([
         "MANAGEMENT_ENDPOINT_HEALTH_SHOWDETAILS": "always",
+        "management.endpoints.web.expose":"*"
 ])
